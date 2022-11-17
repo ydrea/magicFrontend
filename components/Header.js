@@ -28,7 +28,7 @@ export default () => {
       <div className={styles.title}>
         <Link href="/">
           <a>
-            <img src="/logo.png" alt="logo" />
+            <img src="/logo.svg" height="120" alt="logo" />
             <h3>WHITE TREE</h3>
           </a>
         </Link>
