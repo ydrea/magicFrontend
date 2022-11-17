@@ -1,7 +1,7 @@
 export default () => (
   <footer>
     <div>
-      © 2022 - Da
+      © 2022 - da|
       <a
         target="_blank"
         rel="noopener noreferrer"
@@ -9,7 +9,7 @@ export default () => (
       >
         ydrea
       </a>
-      m Nation
+      |mnation
     </div>
   </footer>
 );
