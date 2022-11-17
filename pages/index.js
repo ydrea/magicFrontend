@@ -1,19 +1,21 @@
-import Head from 'next/head'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-
-import { fromImageToUrl, API_URL } from '../utils/urls'
-import { twoDecimals } from '../utils/format'
+import Head from "next/head";
+import Link from "next/link";
+import styles from "../styles/Home.module.css";
+import { twoDecimals } from "../utils/format";
+import { API_URL, fromImageToUrl } from "../utils/urls";
 
 export default function Home({ products }) {
   return (
     <div>
       <Head>
-        <title>Build an Ecommerce with NextJS, Magic, Strapi and Stripe</title>
-        <meta name="description" content="Learn how to build a FullStack Ecommerce in this 2 hours and a half free video sponsored by Magic" />
+        <title>THE WHITE TREE</title>
+        <meta
+          name="description"
+          content="locally grown, organic & affordable meals"
+        />
       </Head>
 
-      {products.map(product => (
+      {products.map((product) => (
         <div className={styles.product}>
           <Link href={`/products/${product.slug}`}>
             <a>
@@ -30,16 +32,18 @@ export default function Home({ products }) {
         </div>
       ))}
     </div>
-  )
+  );
 }
 
 export async function getStaticProps() {
-  const product_res = await fetch(`${API_URL}/products/`)
-  const products = await product_res.json()
+  const product_res = await fetch(`${API_URL}/products/`);
 
+  console.log(product_res);
+  const products = await product_res.json();
+  console.log(products);
   return {
     props: {
-        products
-    }
-  }
+      products,
+    },
+  };
 }
