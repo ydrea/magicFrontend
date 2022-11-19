@@ -16,8 +16,8 @@ body {
 
 a {
   color: inherit;
-  text-decoration: underline;
-}
+  text-decoration: none
+  }
 
 * {
   box-sizing: border-box;
@@ -29,6 +29,11 @@ img {
 
 footer {
   text-align: center;
+}
+
+footer a{
+  text-decoration: overline underline;
+  ;
 }
 
 h1 {

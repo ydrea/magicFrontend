@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { twoDecimals } from "../utils/format";
 import { API_URL, fromImageToUrl } from "../utils/urls";
+// import { faFontAwesome } from "@fortawesome/free-regular-svg-icons";
+// import {faEuro} from '@fortawesome/free-regular-svg-icons'
 
 export default function Home({ products }) {
   return (
@@ -17,14 +19,14 @@ export default function Home({ products }) {
 
       {products.map((product) => (
         <div className={styles.product}>
-          <Link href={`/products/${product.slug}`}>
+          <Link href={`/products/${product.id}`}>
             <a>
               <div className={styles.product__Rows}>
                 <div className={styles.product__ColImg}>
                   <img src={fromImageToUrl(product.image)} />
                 </div>
                 <div className={styles.product__Col}>
-                  {product.name} ${twoDecimals(product.price)}
+                  {product.name} &euro;{twoDecimals(product.price)}
                 </div>
               </div>
             </a>

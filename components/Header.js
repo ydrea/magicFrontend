@@ -28,7 +28,7 @@ export default () => {
       <div className={styles.title}>
         <Link href="/">
           <a>
-            <img src="/logo.svg" height="150" alt="logo" />
+            <img src="/glogo.svg" height="150" alt="logo" />
             <h3 className={styles.h3}>WHITE TREE</h3>
           </a>
         </Link>
@@ -38,6 +38,7 @@ export default () => {
         {user ? (
           <Link href="/account">
             <a>
+              account
               <img src="/user_avatar.png" alt={user.email} />
             </a>
           </Link>
