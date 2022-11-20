@@ -34,6 +34,30 @@ export default () => {
         </Link>
       </div>
 
+      <div className={styles.title}>
+        <Link href="/restaurants">
+          <a>
+            <h3 className={styles.h3}>restaurants</h3>
+          </a>
+        </Link>
+      </div>
+
+      <div className={styles.title}>
+        <Link href="/producers">
+          <a>
+            <h3 className={styles.h3}>producers</h3>
+          </a>
+        </Link>
+      </div>
+
+      <div className={styles.title}>
+        <Link href="/menus">
+          <a>
+            <h3 className={styles.h3}>menus</h3>
+          </a>
+        </Link>
+      </div>
+
       <div className={styles.auth}>
         {user ? (
           <Link href="/account">
