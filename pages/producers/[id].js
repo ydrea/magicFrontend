@@ -25,7 +25,7 @@ const Producer = ({ item }) => {
 };
 
 export async function getStaticProps({ params: { id } }) {
-  const res = await fetch(`${API_URL}/menus/?id=${id}`);
+  const res = await fetch(`${API_URL}/producers/?id=${id}`);
   const found = await res.json();
 
   return {

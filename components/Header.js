@@ -35,6 +35,14 @@ export default () => {
       </div>
 
       <div className={styles.title}>
+        <Link href="/products">
+          <a>
+            <h3 className={styles.h3}>products</h3>
+          </a>
+        </Link>
+      </div>
+
+      <div className={styles.title}>
         <Link href="/restaurants">
           <a>
             <h3 className={styles.h3}>restaurants</h3>
