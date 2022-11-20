@@ -22,7 +22,7 @@ function restaurants({ items }) {
   console.log(items);
   return (
     <div>
-      <h3>menus</h3>
+      <h3>restaurants</h3>
       <span>
         {" "}
         {items.map((i) => (

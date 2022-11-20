@@ -6,7 +6,7 @@ import { API_URL, fromImageToUrl } from "../utils/urls";
 //
 
 export async function getStaticProps() {
-  const res = await fetch(`${API_URL}/producers/`);
+  const res = await fetch(`${API_URL}/products/`);
   console.log(res);
   const items = await res.json();
   console.log(items);
@@ -18,16 +18,16 @@ export async function getStaticProps() {
 }
 
 //
-function producers({ items }) {
+function products({ items }) {
   console.log(items);
   return (
     <div>
-      <h3>producers</h3>
+      <h3>products</h3>
       <span>
         {" "}
         {items.map((i) => (
           <div className={styles.product}>
-            <Link href={`/producers/${i.id}`}>
+            <Link href={`/products/${i.id}`}>
               <a>
                 <div className={styles.product__Rows}>
                   <div className={styles.product__ColImg}>
@@ -46,4 +46,4 @@ function producers({ items }) {
   );
 }
 
-export default producers;
+export default products;
